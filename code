@@ -34,3 +34,11 @@ char symbol;
 # define YYSTYPE_IS_DECLARED 1
 #endif
 extern YYSTYPE yylval;
+
+output
+
+flex name.l
+bison -d exp.y
+gcc lex.yy.c exp.tab.c
+a.exe*
+a=10+8*3
